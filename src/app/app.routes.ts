@@ -4,11 +4,15 @@ import { Dogs } from './dogs/dogs';
 export const routes: Routes = [
   {
     path: '',
-    pathMatch: 'prefix',
+    pathMatch: 'full',
     redirectTo: 'list',
   },
   {
     path: 'list',
     component: Dogs,
+  },
+  {
+    path: '**',
+    redirectTo: 'list',
   },
 ];
