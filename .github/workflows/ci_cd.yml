@@ -32,7 +32,7 @@ jobs:
         run: npx playwright install --with-deps chromium
 
       - name: Build Angular app
-        run: npm run build -- --configuration=production --base-href="/apps/"
+        run: npm run build -- --configuration=production --base-href="/dogs/"
 
       - name: Run tests
         run: npm run test -- --watch=false --browsers=chromium
@@ -48,7 +48,7 @@ jobs:
 
     environment:
       name: github-pages
-      url: https://raju-jsr.github.io/apps/
+      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
       - name: Deploy to GitHub Pages
