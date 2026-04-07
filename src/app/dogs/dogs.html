@@ -1,0 +1,13 @@
+<div class="container">
+  <h1>Dogs</h1>
+  @for (dog of dogs; track dog.id) {
+    <div class="dog-card">
+      <h2>{{ dog.attributes.name }}</h2>
+      <p>{{ dog.attributes.description }}</p>
+      <div class="stats">
+        <span>Life: {{ dog.attributes.life.max | dogAge }}</span>
+        <span>Weight: {{ dog.attributes.male_weight.max | dogWeight }}</span>
+      </div>
+    </div>
+  }
+</div>
