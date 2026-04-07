@@ -48,7 +48,7 @@ jobs:
 
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: https://raju-jsr.github.io/apps/
 
     steps:
       - name: Deploy to GitHub Pages
